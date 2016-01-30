@@ -5,8 +5,8 @@
 
 .emoji-action {
   position: absolute;
-  bottom: 13px;
-  right: 175px;
+  top: 10px;
+  right: 10px;
   height: 16px;
   z-index: 1;
 }
@@ -17,11 +17,15 @@
   height: 100%;
 }
 
+.reaction {
+  margin: 1%;
+}
+
 .emoji-keyboard {
-  width: 300px;
+  width: 200px;
   height: 200px;
-  top: -40px;
-  right: -500px;
+  left: 30px;
+  top: -10px;
   overflow-y: scroll;
   border: 1px solid rgb(168, 168, 168);
   border-radius: 8px;
