@@ -1,1 +1,1 @@
-# Chirrup Chrome Extension :zap:
+# Twitter-ES Chrome Extension :zap:
