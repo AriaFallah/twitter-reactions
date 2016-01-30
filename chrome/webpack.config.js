@@ -20,6 +20,11 @@ module.exports = {
       },
     }),
     new webpack.optimize.DedupePlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+      },
+    }),
   ],
   module: {
     loaders: [{
@@ -29,6 +34,9 @@ module.exports = {
     }, {
       test: /\.scss$/,
       loaders: ['style', 'css', 'sass'],
+    }, {
+      test: /\.html$/,
+      loaders: ['html'],
     }],
   },
 }

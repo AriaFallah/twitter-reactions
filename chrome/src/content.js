@@ -1,15 +1,23 @@
 // Styles
 require('./scss/app.scss')
 
-// Preact and Components
-import { h, render } from 'preact'
-import EmojiAction from './components/emoji-action'
+const EmojiAction = require('html/emoji-action')
+const EmojiBar    = require('html/emoji-bar')
 
-function addActions() {
-  const actionList = $('.ProfileTweet-actionList')
-  actionList.each(function() {
-    render(<EmojiAction />, this)
+function inject() {
+  const tweets = $('.tweet.original-tweet')
+  tweets.each(function() {
+    const id = $(this).attr('data-tweet-id')
+
+    const actionLists = $('.ProfileTweet-actionList')
+    actionLists.each(function() {
+
+    })
+    const tweetFooters = $('.stream-item-footer')
+    tweetFooters.each(function() {
+
+    })
   })
 }
 
-addActions()
+inject()

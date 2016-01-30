@@ -3,14 +3,39 @@
   height: 16px;
 }
 
+.emoji-container {
+  position: relative;
+}
+
 .emoji-keyboard {
-  display: flex;
-  flex-wrap: wrap;
-  width: 200px;
+  width: 300px;
   height: 200px;
+  top: 30px;
   overflow-y: scroll;
   border: 1px solid rgb(168, 168, 168);
-  position: relative;
-  top: 100px;
-  left: 600px;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  padding: 10px;
+  z-index: 1;
+  display: none;
+
+  .header {
+    margin-bottom: 15px;
+  }
+
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  img {
+    margin: 1%;
+    padding: 1%;
+    border-radius: 4px;
+    &:hover {
+      background-color: rgba(83, 193, 208, 0.5)
+    }
+  }
 }
