@@ -1,22 +1,18 @@
 // Styles
 require('./scss/app.scss')
 
-const EmojiAction = require('html/emoji-action')
-const EmojiBar    = require('html/emoji-bar')
+import React from 'react'
+import { render } from 'react-dom'
+import EmojiAction from './components/emoji-action'
 
 function inject() {
-  const tweets = $('.tweet.original-tweet')
+  const tweets = $('.tweet.original-tweet .stream-item-footer')
   tweets.each(function() {
-    const id = $(this).attr('data-tweet-id')
-
-    const actionLists = $('.ProfileTweet-actionList')
-    actionLists.each(function() {
-
-    })
-    const tweetFooters = $('.stream-item-footer')
-    tweetFooters.each(function() {
-
-    })
+    const tweet = $(this)
+    const div = $('<div></div>')[0]
+    const id = tweet.attr('data-tweet-id')
+    render(<EmojiAction id={id}/>, div)
+    tweet.append(div)
   })
 }
 
