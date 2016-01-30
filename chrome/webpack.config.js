@@ -1,7 +1,7 @@
 'use strict';
 
-const path = require('path');
-const webpack = require('webpack');
+const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
   devtool: 'source-map',
@@ -17,7 +17,7 @@ module.exports = {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify('production'),
+        NODE_ENV: JSON.stringify('production'),
       },
     }),
     new webpack.optimize.UglifyJsPlugin({
@@ -31,6 +31,12 @@ module.exports = {
       test: /\.js$/,
       loaders: ['babel'],
       include: path.join(__dirname, 'src'),
+    }, {
+      test: /\.scss$/,
+      loaders: ['style', 'css', 'sass'],
+    }, {
+      test: /\.html$/,
+      loaders: ['html'],
     }],
   },
-};
+}
