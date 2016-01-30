@@ -35,7 +35,6 @@
     "webpack": "^1.12.12"
   },
   "dependencies": {
-    "preact": "^2.8.2",
-    "twemoji": "^1.4.1"
+    "preact": "^2.8.2"
   }
 }

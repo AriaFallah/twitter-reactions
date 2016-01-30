@@ -14,7 +14,8 @@
     "semi": [2, "never"],
     "func-names": 0,
     "space-before-function-paren": 0,
-    "no-multi-spaces": 0
+    "no-multi-spaces": 0,
+    "no-unused-vars": 0
   },
   "plugins": [
     "babel"

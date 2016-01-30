@@ -1,15 +1,15 @@
 // Styles
 require('./scss/app.scss')
 
-import emojiAction from './components/emoji-action'
-import emojiDashboard from './components/emoji-keyboard'
+// Preact and Components
+import { h, render } from 'preact'
+import EmojiAction from './components/emoji-action'
 
 function addActions() {
   const actionList = $('.ProfileTweet-actionList')
   actionList.each(function() {
-    $(this).append(emojiAction)
+    render(<EmojiAction />, this)
   })
 }
 
 addActions()
-$(document.body).prepend(emojiDashboard)
