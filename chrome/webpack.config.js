@@ -4,13 +4,13 @@ const path = require('path')
 const webpack = require('webpack')
 
 module.exports = {
-  entry: [
-    './src/index',
-  ],
+  entry: {
+    content: './src/content',
+    background: './src/background',
+  },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/static/',
+    filename: '[name].js',
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
